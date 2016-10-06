@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <!-- http://www.w3schools.com/howto/howto_css_modal_images.asp -->
+</head>
+
+<body>
+    <title>Operation: L2Nade</title>
+    <div id ="title" class="thin"><a href="#">Operation : L2P</a></div>
+    <div id="container">
+    <div id="title" style="position: static;"></div>
+    {% for map in mapData %}
+           <a href="/maps/{{ map[0] }}"><div class="map_banner" style="background-image:url(/static/images/banners/{{ map[0][3:] }}.png);">{{ map[0][3:]|title }}</div></a>
+    {% endfor %}
+    </div>
+</body>
+
+</html>
