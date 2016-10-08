@@ -10,13 +10,13 @@ import db
 def default():
     return render_template('index.html', mapData=db.maps)
 
-@app.route('/maps/', defaults={'mapName': 0})
-@app.route('/maps/<mapName>')
-def maps(mapName):
+@app.route('/<mapName>')
+def mapPic(mapName):
+    """Return HTML for modal images"""
     for data in db.maps:
         if mapName == data[0]:
-            return render_template('map.html', mapData=[db.maps, data])
-    return render_template('index.html')
+            return render_template('img.html', mapData=mapName[3:])
+    return render_template('404.html'), 404
 
 @app.errorhandler(404)
 def page_not_found(e):
