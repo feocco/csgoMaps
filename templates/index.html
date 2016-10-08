@@ -1,18 +1,62 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <title>Operation: L2Nade</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/styles.css">
-  <!-- http://www.w3schools.com/howto/howto_css_modal_images.asp -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    <title>Operation: L2Nade</title>
-    <div id ="title" class="thin"><a href="#">Operation : L2P</a></div>
-    <div id="container">
-    <div id="title" style="position: static;"></div>
-    {% for map in mapData %}
-           <a href="/maps/{{ map[0] }}"><div class="map_banner" style="background-image:url(/static/images/banners/{{ map[0][3:] }}.png);">{{ map[0][3:]|title }}</div></a>
-    {% endfor %}
-    </div>
-</body>
 
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+          <a id="title" class="dropdown-toggle" data-toggle="dropdown" href="#"><strong class="text-primary">Operation: L2Nade</strong>
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            {% for map in mapData %}
+              <li class="text-center"><a href="{{ map[0] }}" data-toggle="modal" href="{{ map[0] }}" data-target="#myModal">{{ map[0] }}</a></li>
+            {% endfor %}
+          </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  
+  <!-- Template Content -->
+  {% for map in mapData %}
+    <a data-toggle="modal" href="{{ map[0] }}" data-target="#myModal"><div class="map_banner" style="background-image:url(/static/images/banners/{{ map[0][3:] }}.png);">
+      <h1 class="text-primary text-capitalize text-center text-nowrap">{{ map[0][3:] }}</h1>
+    </div></a>
+  {% endfor %}
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body"><div class="te"></div></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Refresh HTML on modal close -->
+<script>
+  $('#myModal').on('hidden.bs.modal', function () {
+   location.reload();
+  })
+  Demo
+</script>
+
+</body>
 </html>
