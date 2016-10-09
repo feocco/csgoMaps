@@ -1,52 +1,60 @@
 @font-face { font-family: csgo; src: url('../font/cs_bold.ttf');}
 
-body {
-    background-image:url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png");
-    background-size: initial;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #FF5733;
-    font-family: csgo;
-    text-align: center;
-    font-size: 64px;
-}
-
 .map_banner {
-    height: 350px;
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    line-height: 350px;  
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0px 5px 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }
 
-a {
-    color: #FF5733;
+ul.nav {
+    float: none;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 300px;
+}
+
+.container {
+    width: 100%;
+}
+
+html, body {
+    background-image:url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/bright_squares.png");
+    background-size: initial;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body {
+    padding: 70px;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.text-primary, a:hover, h2 {
+    color: #FF7400;
+}
+
+.navbar-fixed-top {
+    background: rgba(145, 145, 145, .5);
 }
 
 #title {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    height: 50px;
-    background-image:url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png");
-    background-size: initial;
-    background-repeat: repeat;
-}
-
-#container {
-    width: 90%;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-width: 3px;
-    border-color: grey;
-    padding: 0 5px 0 5px;
+    font-weight: bold;
+    font-size: 200%;
 }
