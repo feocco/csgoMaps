@@ -1,7 +1,7 @@
 @font-face { font-family: csgo; src: url('../font/cs_bold.ttf');}
 
 .map_banner {
-    height: 400px;
+    height: 600px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@ ul.nav {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    width: 300px;
+    width: 350px;
 }
 
 .container {
@@ -44,10 +44,18 @@ h1 {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-}
+    }
 
-.text-primary, a:hover, h2 {
+.text-primary, div > a:hover, h2 {
     color: #FF7400;
+    text-decoration: none;
+    font-family: csgo;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .navbar-fixed-top {
@@ -56,5 +64,26 @@ h1 {
 
 #title {
     font-weight: bold;
-    font-size: 200%;
+    font-size: 2em;
 }
+
+.modal-content, img {
+    max-height: 850px;
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    border-style: none;
+}
+
+.b-lazy {
+    -webkit-transition: opacity 500ms ease-in-out;
+    -moz-transition: opacity 500ms ease-in-out;
+    -o-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+    max-width: 100%;
+    opacity: 0;
+}
+.b-lazy.b-loaded {
+    opacity: 1;
+}
+
+

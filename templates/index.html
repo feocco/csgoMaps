@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Operation: L2Nade</title>
+  <title>CS Callouts</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/styles.css">
+  <!--<link rel="stylesheet" href="../static/css/onepage-scroll.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../static/scripts/blazy/blazy.js" type="text/javascript"></script>
+  <!--<script src="../static/scripts/jquery.onepage-scroll.js" type="text/javascript"></script>-->
 </head>
 <body>
 
@@ -16,7 +19,7 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li class="dropdown">
-          <a id="title" class="dropdown-toggle" data-toggle="dropdown" href="#"><strong class="text-primary">Operation: L2Nade</strong>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong class="text-primary" id="title">Make CS Great Again</strong>
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             {% for map in mapData %}
@@ -32,9 +35,13 @@
   
   <!-- Template Content -->
   {% for map in mapData %}
-    <a data-toggle="modal" href="{{ map[0] }}" data-target="#myModal"><div class="map_banner" style="background-image:url(/static/images/banners/{{ map[0][3:] }}.png);">
-      <h1 class="text-primary text-capitalize text-center text-nowrap">{{ map[0][3:] }}</h1>
-    </div></a>
+  <div class="pages">
+    <a data-toggle="modal" href="{{ map[0] }}" data-target="#myModal">
+      <div class="b-lazy map_banner" data-src="/static/img/{{ map[0][3:] }}-min.png">
+        <h1 class="text-primary text-capitalize text-center text-nowrap">{{ map[0][3:] }}</h1>
+      </div>
+    </a>
+  </div>
   {% endfor %}
   
   <!-- Modal -->
@@ -52,10 +59,17 @@
 
 <!-- Refresh HTML on modal close -->
 <script>
+$( document ).ready(function() {
   $('#myModal').on('hidden.bs.modal', function () {
-   location.reload();
-  })
-  Demo
+    location.reload();
+  });
+  
+  (function() {
+      // Initialize bLazy http://dinbror.dk/blog/blazy/
+      var bLazy = new Blazy();
+  })();
+  
+});
 </script>
 
 </body>

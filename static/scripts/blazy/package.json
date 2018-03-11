@@ -1,0 +1,66 @@
+{
+  "name": "blazy",
+  "version": "1.6.4",
+  "description": "A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more.",
+  "main": "blazy.js",
+  "keywords": [
+    "blazy",
+    "blazyjs",
+    "blazy.js",
+    "lazy",
+    "lazyload",
+    "lazyloading",
+    "image",
+    "images",
+    "iframe",
+    "video",
+    "unity",
+    "retina",
+    "responsive",
+    "performance"
+  ],
+  "author": {
+    "name": "Bjørn Klinggaard",
+    "url": "http://dinbror.dk/blazy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinbror/blazy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dinbror/blazy/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/dinbror/blazy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "gitHead": "2dfa8930776755f022e58596ff5d6c656855e106",
+  "_id": "blazy@1.6.4",
+  "_shasum": "d89bcbc19a0886a5ef01f2d576d0a083fdaccc17",
+  "_from": "blazy@latest",
+  "_npmVersion": "3.10.5",
+  "_nodeVersion": "4.4.7",
+  "_npmUser": {
+    "name": "dinbror",
+    "email": "hello@dinbror.dk"
+  },
+  "dist": {
+    "shasum": "d89bcbc19a0886a5ef01f2d576d0a083fdaccc17",
+    "tarball": "https://registry.npmjs.org/blazy/-/blazy-1.6.4.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "dinbror",
+      "email": "hello@dinbror.dk"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/blazy-1.6.4.tgz_1475962318710_0.6651070560328662"
+  },
+  "_resolved": "https://registry.npmjs.org/blazy/-/blazy-1.6.4.tgz"
+}

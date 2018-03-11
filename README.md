@@ -1,2 +1,1 @@
-"# csgoMaps" 
-https://operation-rebuild-operation-l2p-kelicon.c9users.io/
+Web Application to display compeitive Counter-Strike: Global Offensive maps with callouts.
